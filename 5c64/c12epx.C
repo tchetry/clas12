@@ -323,7 +323,7 @@ void c12epx::Terminate()
 {
 	//TFile* outfile=new TFile("c12exp.root","recreate");
 	char fileName[30];
-	sprintf(fileName, "5c64-job7.root");
+	sprintf(fileName, "jobFiles/rootFiles/5c64-job1.root");
 	TFile* outfile=new TFile(fileName,"recreate");
 	fOutput->Write();
 	outfile->Close();
