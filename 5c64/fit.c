@@ -5,7 +5,7 @@
 	It quits if it does not find this file
 
 	For each job, it:
-		- creates 'figures/job#' directory
+		- creates 'figures/elasticPeak/job#' directory
 		- fits the peaks and saves the images in 'figures/job#' directory
 		- Saves the fit information in a 'job#.dat' file in the current directory. The contents are
 		  in the order:
@@ -78,7 +78,7 @@ void fit(){
 	sigPar[2] = 0.01;	//Gaussian Width
 
 	TFile *f1;
-	sprintf(jobID, "5c64-job%d.root", fileNum);
+	sprintf(jobID, "jobFiles/rootFiles/5c64-job%d.root", fileNum);
 	if( stat(jobID, &info ) != 0 )
 	{
 		cout << "\n\tNo file: '" << jobID << "' is found\n" << endl;
@@ -87,7 +87,7 @@ void fit(){
 	else
 		f1 = new TFile(jobID);
 
-	sprintf(jobID, "figures/job%d", fileNum);
+	sprintf(jobID, "figures/elasticPeak/job%d", fileNum);
 	if( stat(jobID, &info ) != 0 )
 	{
 		cout << "\nCannot access "<< jobID << endl;
@@ -102,7 +102,7 @@ void fit(){
     }
 
 	ofstream yieldFile;
-	sprintf(jobID, "job%d.dat", fileNum);
+	sprintf(jobID, "tables/job%d.dat", fileNum);
 	yieldFile.open(jobID);
 
 	
@@ -191,7 +191,7 @@ void fit(){
 									
 			gStyle->SetOptStat(1112);
 			
-			sprintf(name,"figures/job%d/Sector%dTheta%d.eps", fileNum, i+1, ii+1);
+			sprintf(name,"figures/elasticPeak/job%d/Sector%dTheta%d.eps", fileNum, i+1, ii+1);
 			canv[i*NUMSECT+ii]->SaveAs(name);			
 			canv[i*NUMSECT+ii]->~TCanvas();
 		}
@@ -265,7 +265,7 @@ void fit(){
 		ytitle1.SetTextAngle(90.0);
 		ytitle1.DrawLatexNDC(0.07, 0.25,"#sigma_{W} [GeV]");
 
-	sprintf(jobID,"job%d.pdf", fileNum);
+	sprintf(jobID,"figures/elasticPeak/summary/job%d.pdf", fileNum);
 	canv1->SaveAs(jobID);
 	canv1->~TCanvas();
 	yieldFile.close();

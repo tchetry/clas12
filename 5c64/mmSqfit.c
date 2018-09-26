@@ -21,7 +21,7 @@
 	This program will exit automatically after completion.
 
 
-	TAYA, Sep 20, 2018
+	TAYA, Sep 25, 2018
 ****************************************************************************************************/
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -74,7 +74,7 @@ void compare()
 	for(i = 0; i < NJOBS; ++i)
 	{
 		ifstream inputFile;
-		sprintf(jobID, "mmsq-job%d.dat", i+1);
+		sprintf(jobID, "tables/mmsq-job%d.dat", i+1);
 		inputFile.open(jobID);
 		for(j = 0; j < NUMSECT; ++j)
 		{
@@ -181,7 +181,7 @@ canv1->cd();
 		ytitle1.SetTextAngle(90.0);
 		ytitle1.DrawLatexNDC(0.06, 0.32,"#sigma_{MM^{2}(ep)} [GeV^{2}]");
 
-	canv1->SaveAs("mmsqComp.pdf");
+	canv1->SaveAs("figures/mmsq/summary/mmsqComp.pdf");
 	canv1->~TCanvas();
 	
 }
@@ -225,7 +225,7 @@ void fit(int fileNum)
 	sigPar[2] = 0.01;	//Gaussian Width
 
 	TFile *f1;
-	sprintf(jobID, "5c64-job%d.root", fileNum);
+	sprintf(jobID, "jobFiles/rootFiles/5c64-job%d.root", fileNum);
 	if( stat(jobID, &info ) != 0 )
 	{
 		cout << "\n\tNo file: '" << jobID << "' is found\n" << endl;
@@ -249,7 +249,7 @@ void fit(int fileNum)
     }
 
 	ofstream yieldFile;
-	sprintf(jobID, "mmsq-job%d.dat", fileNum);
+	sprintf(jobID, "tables/mmsq-job%d.dat", fileNum);
 	yieldFile.open(jobID);
     Float_t xmin, xmax;
 	

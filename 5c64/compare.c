@@ -37,7 +37,7 @@ void compare(){
 	double m4bin[THETABINS], m4erbin[THETABINS], s4bin[THETABINS], s4erbin[THETABINS];
 
 	ifstream yieldF1;
-	yieldF1.open("job1.dat");
+	yieldF1.open("tables/job1.dat");
 	for(i = 0; i < NENT; i++)
 	{
 		yieldF1 >> m1[i] >> m1er[i] >> s1[i] >> s1er[i];
@@ -45,7 +45,7 @@ void compare(){
 	yieldF1.close();
 
 	ifstream yieldF2;
-	yieldF2.open("job2.dat");
+	yieldF2.open("tables/job2.dat");
 	for(i = 0; i < NENT; i++)
 	{
 		yieldF2 >> m2[i] >> m2er[i] >> s2[i] >> s2er[i];
@@ -53,7 +53,7 @@ void compare(){
 	yieldF2.close();
 
 	ifstream yieldF3;
-	yieldF3.open("job3.dat");
+	yieldF3.open("tables/job3.dat");
 	for(i = 0; i < NENT; i++)
 	{
 		yieldF3 >> m3[i] >> m3er[i] >> s3[i] >> s3er[i];
@@ -61,7 +61,7 @@ void compare(){
 	yieldF3.close();
 
 	ifstream yieldF4;
-	yieldF4.open("job4.dat");
+	yieldF4.open("tables/job4.dat");
 	for(i = 0; i < NENT; i++)
 	{
 		yieldF4 >> m4[i] >> m4er[i] >> s4[i] >> s4er[i];
@@ -330,7 +330,7 @@ void compare(){
 		ytitle1.SetTextAngle(90.0);
 		ytitle1.DrawLatexNDC(0.07, 0.25,"#sigma_{W} [GeV]");
 
-	canv1->SaveAs("comp.pdf");
+	canv1->SaveAs("figures/elasticPeak/summary/comp.pdf");
 	canv1->~TCanvas();
 	
 }
