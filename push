@@ -10,4 +10,4 @@ git add --all
 git status
 git commit -m "$*"
 ##git push origin master
-git push https://github.com/tchetry/clas12
+git push git@github.com:tchetry/clas12.git
