@@ -1,0 +1,294 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage[margin=1.0in]{geometry}         %adjust margins
+
+\usepackage[pdftex]{graphicx}                       %use images
+%\usepackage{epstopdf}
+%\epstopdfsetup{suffix=.generated,prefersuffix=true}
+\graphicspath{ {figures/} } %where to find files
+\usepackage[outdir=./figures/]{epstopdf}
+
+\usepackage{sectsty}                        %center section titles
+%\allsectionsfont{\centering}
+\usepackage{chngcntr}                       %Start Figure counting according to section
+\counterwithin{figure}{section}             %where to start that counter
+\usepackage[section]{placeins}              %able to use Floatbarrier
+\usepackage{subcaption}                     %subfigures allowed
+\usepackage{amsmath}                        %math stuff
+\usepackage{caption}
+\usepackage{placeins}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{lineno}
+\usepackage{mathrsfs}
+\usepackage{tabularx}
+
+%opening
+\title{Analysis of the Elastic peak in $ep\rightarrow ep'$ using different cooked versions of Run 2391}
+\author{Taya Chetry}
+
+\begin{document}
+\maketitle
+
+\section{About the run 2391}
+The details about this run can be accessed from this link:\\ \url{https://logbooks.jlab.org/entry/3594539}.
+
+\section{Cooking version 5c.6.4}
+The elastic scattering events were binned in a total of 8 angle bins in the range, $\theta_e = [8.0^{0}, 22.0^{0}]$ for each sector. The overall spectrum looks like in Fig~\ref{fig:elasticPeakGlobal}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth,keepaspectratio = true]{Wep}
+  \caption{Global spectrum for the elastic $ep$ scattering. Only events with $|MM(ep\rightarrow ep')|<0.01$ GeV are selected.}
+  \label{fig:elasticPeakGlobal}
+\end{figure}
+
+\section{W distribution and Gaussian Fits}
+%\subsection{Sector 1}
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector1Theta1}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector1Theta2}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector1Theta3}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector1Theta4}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector1Theta5}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector1Theta6}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector1Theta7}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector1Theta8}
+  \end{subfigure}
+  \caption{W distribution for Sector 2.}
+  \label{fig:Wsec1}
+\end{figure}
+\FloatBarrier
+
+%\subsection{Sector 2}
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector2Theta1}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector2Theta2}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector2Theta3}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector2Theta4}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector2Theta5}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector2Theta6}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector2Theta7}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector2Theta8}
+  \end{subfigure}
+  \caption{W distribution for Sector 2.}
+  \label{fig:Wsec2}
+\end{figure}
+\FloatBarrier
+
+%\subsection{Sector 3}
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector3Theta1}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector3Theta2}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector3Theta3}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector3Theta4}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector3Theta5}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector3Theta6}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector3Theta7}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector3Theta8}
+  \end{subfigure}
+  \caption{W distribution for Sector 3.}
+  \label{fig:Wsec3}
+\end{figure}
+\FloatBarrier
+
+%\subsection{Sector 4}
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector4Theta1}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector4Theta2}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector4Theta3}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector4Theta4}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector4Theta5}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector4Theta6}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector4Theta7}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector4Theta8}
+  \end{subfigure}
+  \caption{W distribution for Sector 4.}
+  \label{fig:Wsec4}
+\end{figure}
+\FloatBarrier
+
+%\subsection{Sector 5}
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector5Theta1}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector5Theta2}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector5Theta3}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector5Theta4}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector5Theta5}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector5Theta6}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector5Theta7}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector5Theta8}
+  \end{subfigure}
+  \caption{W distribution for Sector 5.}
+  \label{fig:Wsec5}
+\end{figure}
+\FloatBarrier
+
+%\subsection{Sector 6}
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector6Theta1}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector6Theta2}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector6Theta3}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector6Theta4}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector6Theta5}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector6Theta6}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector6Theta7}
+  \end{subfigure}
+  ~~
+  \begin{subfigure}[b]{0.20\textwidth}
+    \includegraphics[width= 1.5in, keepaspectratio = true]{Sector6Theta8}
+  \end{subfigure}
+  \caption{W distribution for Sector 6.}
+  \label{fig:Wsec6}
+\end{figure}
+\FloatBarrier
+
+\newpage
+\section{Elastic peak: centroid and resolution}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth, height = 6.5 in, keepaspectratio = true]{run2391_5c64_efac100}
+  \caption{Elastic peak position from the fit for each sector. Dashed line in green is to guide the eye ($W = 0.94$ GeV)}
+  \label{fig:peakNwidth}
+  %%%% Fig using /home/chetry/g10Omega/mcCode/mcMakeHisto/afterEloss/acceptanceDraw.c  %%%%%%%
+\end{figure}
+
+
+\end{document}
